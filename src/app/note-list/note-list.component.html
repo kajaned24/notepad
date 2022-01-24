@@ -1,0 +1,24 @@
+<div *ngIf="!notes.length" class="no-notes">
+  <h3>You haven't written any note yet</h3>
+</div>
+<div
+  [routerLink]="['/', i]"
+  class="note"
+  *ngFor="let note of notes; let i = index"
+>
+  <div class="desc">
+    <h3 class="title">{{ note.title }}</h3>
+    <p class="date">
+      {{ note.date.getDate() }}/{{ note.date.getMonth() + 1 }}/{{
+        note.date.getFullYear()
+      }}
+    </p>
+  </div>
+  <div class="modify">
+    <button [routerLink]="['/edit', i]" type="button">Edit</button>
+    <button (click)="deleteNote(i)" type="delete">Delete</button>
+  </div>
+</div>
+<nav>
+  <button routerLink="/new" type="button">+</button>
+</nav>

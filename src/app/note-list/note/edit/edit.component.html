@@ -1,0 +1,14 @@
+<span routerLink="/home">< Go back</span>
+<main>
+  <form [formGroup]="form" (ngSubmit)="passFormData()">
+    <div class="title">
+      <label>Title</label>
+      <textarea formControlName="title" cols="30" rows="2"></textarea>
+    </div>
+    <div class="content">
+      <label>Content</label>
+      <textarea formControlName="content" cols="70" rows="10"></textarea>
+    </div>
+    <button type="submit">Save</button>
+  </form>
+</main>

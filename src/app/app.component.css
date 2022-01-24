@@ -1,0 +1,16 @@
+.note-list {
+  background-color: white;
+  width: 50%;
+  height: 100vh;
+  margin: 2rem auto;
+  border: 10px solid #fd7264;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+hr {
+  margin: 0;
+}
